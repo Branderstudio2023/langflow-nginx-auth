@@ -1,5 +1,7 @@
 FROM langflowai/langflow:latest
 
+USER root
+
 RUN apt-get update && apt-get install -y nginx apache2-utils
 
 COPY nginx.conf /etc/nginx/nginx.conf
